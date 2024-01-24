@@ -150,7 +150,26 @@ h4 {
   padding-right: 10px;
 }
 
-/* habilidades SECTION */
+/* HABILIDADES */
+#habilidades {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+}
+#habilidades button{
+  background-color: var(--black);
+  color: white;
+}
+.accordion-item {
+  background-color: var(--purple-light);
+}
+#habilidades button i {
+  padding-right: 10px;
+}
+.icon{
+  padding: 20px 0px;
+  max-width: 50px;
+}
 #education {
   display: flex;
   flex-direction: column;
@@ -257,23 +276,6 @@ h4 {
   color: var(--blueStrong-color);
 }
 
-/* HABILIDADES */
-#habilidades {
-  display: flex;
-  justify-content: center;
-  margin: 0px auto;
-}
-#habilidades button {
-  background-color: #202429;
-  color: white;
-}
-#habilidades button i {
-  padding-right: 10px;
-}
-.icon{
-  padding: 20px 0px;
-  max-width: 50px;
-}
 /* PROYECTOS */
 #proyectos {
   display: grid;
