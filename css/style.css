@@ -90,6 +90,7 @@ main {
   min-height: 90vh;
   display: flex;
   align-items: center;
+  margin-top: 10vh;
 }
 .landing-img {
   max-width: 75%;
@@ -121,18 +122,18 @@ main {
   font-size: 20px;
 }
 .btn-dark {
-  margin-left: 5px;
+  margin-left: 10px;
   background-color: var(--black);
-}
-
-.btn-style:hover {
-  border: 2px solid dashed;
 }
 
 /* TEXT FORMAT  */
 p {
   text-align: justify;
   font-size: 1.4rem;
+  padding-bottom: 10px;
+}
+h2{
+  padding-bottom: 20px;
 }
 h4 {
   font-size: 24px;
@@ -147,7 +148,7 @@ h4 {
 }
 #sobre button span,
 #inicio button span {
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 /* HABILIDADES */
@@ -156,17 +157,26 @@ h4 {
   justify-content: center;
   margin: 0px auto;
 }
-#habilidades button{
-  background-color: var(--black);
-  color: white;
+.accordion-header{
+  padding: 0px;
 }
 .accordion-item {
-  background-color: var(--purple-light);
+  background-color: var(--black);
+}
+.accordion-title{
+  color: white;
+  display: flex;
+  align-items: center;
+}
+.accordion-title p{
+  margin: 0px;
+  margin-left: 10px;
 }
 #habilidades button i {
   padding-right: 10px;
 }
 .icon{
+  display: flex;
   padding: 20px 0px;
   max-width: 50px;
 }
@@ -184,6 +194,8 @@ h4 {
 #current-next {
   margin: 0px auto;
   text-align: center;
+  min-width: 90%;
+  max-width: 90%;
 }
 #current-next .col-12,
 #current-next .col-6 {
@@ -198,6 +210,9 @@ h4 {
 .progress {
   min-height: 25px;
   max-height: 25px;
+}
+.progress:last-child{
+  margin-bottom: 20px;
 }
 
 /* UTILS */
@@ -232,7 +247,8 @@ h4 {
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
   grid-template-rows: minmax(100px, auto);
-  min-width: 100%;
+  min-width: 90%;
+  max-width: 90%;
 }
 .with-80-percent {
   min-width: 80%;
@@ -244,6 +260,10 @@ h4 {
 .text-light-gray {
   color: var(--light-gray);
 }
+.text-right{
+  text-align: right;
+}
+
 .fade {
   transform: translateY(150px);
   opacity: 0;
@@ -334,6 +354,10 @@ h4 {
   font-size: 32px;
   padding: 5px;
 }
+#footer a:last-child,
+#footer ion-icon:last-child{
+  padding: 0px;
+}
 
 /* MEDIA QUERYS */
 @media (max-height: 600px) {
@@ -348,13 +372,16 @@ h4 {
 
 @media (min-width: 320px) and (max-width: 425px) {
   .nav-link {
-    font-size: 1rem;
+    font-size: .8rem;
   }
   #navbarNav .nav-item:last-child {
     justify-content: center;
   }
   p {
     font-size: 1.1rem;
+  }
+  i{
+    font-size: 1.4rem;
   }
   #navbarNav {
     position: absolute;
@@ -371,17 +398,21 @@ h4 {
     align-items: center;
     font-size: 20px;
   }
+  .accordion-item{
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .icon{
+    max-width: 40px;
+  }
   .menu-icon {
     font-size: 26px;
   }
-  .nav-item {
-    justify-content: center;
-  }
-  .btn-dark {
-    margin: 10px 0px;
-  }
   #sobre {
     margin-bottom: 15vh;
+  }
+  #education p{
+    font-size: .9rem !important;
   }
   #topBotButton ion-icon {
     font-size: 24px;
@@ -448,10 +479,13 @@ h4 {
   .landing-img {
     min-width: 100%;
   }
+  .btn-dark {
+    margin: 10px 10px 0px 0px;
+  }
 }
 
-@media (min-width: 1024px) {
-  .navbar-toggler {
-    display: none;
+@media (max-width: 1024px) {
+  .btn-dark {
+    margin: 10px 10px 0px 0px;
   }
 }
