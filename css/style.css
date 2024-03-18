@@ -278,6 +278,9 @@ h4 {
 .text-right {
   text-align: right;
 }
+.text-left{
+  text-align:left;
+}
 .fade {
   transform: translateY(150px);
   opacity: 0;
