@@ -43,11 +43,6 @@ main {
   max-height: 10vh;
   position: fixed;
 }
-.menu-icon {
-  color: white;
-  font-size: 38px;
-  padding: 0;
-}
 #nav > .container {
   display: flex;
   align-items: center;
@@ -56,6 +51,7 @@ main {
 #nav .container-fluid {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .navbar-brand {
   font-weight: bold;
@@ -79,9 +75,9 @@ main {
 #navbarNav {
   display: flex;
 }
-#navbarNav .nav-item:last-child {
+/* #navbarNav .nav-item:last-child {
   justify-content: flex-end;
-}
+} */
 
 /* INICIO */
 #inicio {
@@ -322,7 +318,7 @@ h4 {
 .proyectos-container {
   display: grid;
   margin: 0 auto;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
 
 }
 .thumbnail {
@@ -348,14 +344,16 @@ h4 {
   border: none;
 }
 #topBotButton ion-icon {
-  font-size: 48px;
+  font-size: 36px;
   padding: 10px;
-  color: var(--purple);
 }
-#topBotButton ion-icon:hover {
+.btn-hover{
   border-radius: 50%;
   background-color: var(--purple-light);
   color: white;
+}
+.btn-hover-disabled{
+  color: var(--purple);
 }
 
 /* FOOTER */
@@ -417,7 +415,7 @@ h4 {
   .navbar-nav {
     flex-direction: row;
     background-color: var(--purple-light);
-    padding: 5px;
+    padding: 10px;
   }
   .navbar-brand {
     display: flex;
@@ -446,7 +444,6 @@ h4 {
   }
   #topBotButton ion-icon {
     font-size: 24px;
-    padding: 0;
   }
 }
 @media (max-width: 576px) {
@@ -532,8 +529,17 @@ h4 {
 }
 
 @media (min-width: 1024px) and (max-width:1919px){
+  #nav{
+    max-height: 100%;
+  }
+  #nav .container{
+    padding: 5px;
+  }
   .grid{
     width: 90%;
+  }
+  .proyectos-container{
+    gap: 5px;
   }
   p{
     font-size: 1.1rem;
