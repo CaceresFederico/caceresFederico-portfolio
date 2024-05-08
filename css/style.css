@@ -1,8 +1,8 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+}
 body {
   font-size: 20px;
   font-family: "Nunito", sans-serif;
@@ -76,6 +76,9 @@ main {
   padding: 0;
   color: white;
 }
+#navbarNav {
+  display: flex;
+}
 #navbarNav .nav-item:last-child {
   justify-content: flex-end;
 }
@@ -84,6 +87,7 @@ main {
 #inicio {
   min-width: 100%;
   max-width: 100%;
+  margin-bottom: 20vh;
 }
 #inicio > .container:first-child {
   min-width: 100%;
@@ -157,6 +161,7 @@ h4 {
   min-width: 100vw;
   min-height: 90vh;
   max-height: 90vh;
+  margin-bottom: 15vh;
 }
 #sobre button span,
 #inicio button span {
@@ -201,7 +206,7 @@ h4 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 10vh;
+  margin-bottom: 15vh;
   min-width: 100%;
 }
 .grid p {
@@ -313,18 +318,17 @@ h4 {
   color: var(--blueStrong-color);
 }
 
-/* PROYECTOS */
-#proyectos {
+/* PROYECTOS CONTAINER */
+.proyectos-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
   margin: 0 auto;
+  border: 1px solid grey;
+
 }
 .thumbnail {
   min-width: 100%;
   max-width: 100%;
   cursor: pointer;
-  border-radius: 5px;
 }
 .thumbnail:hover {
   box-shadow: 1px 1px 25px #202429;
@@ -377,20 +381,12 @@ h4 {
 }
 
 /* MEDIA QUERYS */
-@media (max-height: 600px) {
-  section {
-    margin-bottom: 5vh;
-  }
-  #sobre {
-    min-height: 100%;
-    max-height: 100%;
+@media (max-width:375px){
+  #inicio{
+    margin-bottom: 25vh;
   }
 }
-
-@media (min-width:320px)and (max-width:424px){
-  .grid{
-    grid-template-columns: 1fr 1fr 3fr !important;
-  }
+@media (max-width:424px){
   .grid p{
     font-size: .7rem;
   }
@@ -418,11 +414,6 @@ h4 {
   P{
     font-size: 1rem;
   }
-  #navbarNav {
-    position: absolute;
-    top: 10vh;
-    left: 0;
-  }
   .navbar-nav {
     flex-direction: row;
     background-color: var(--purple-light);
@@ -443,8 +434,8 @@ h4 {
   .icon {
     max-width: 40px;
   }
-  #sobre {
-    margin-bottom: 15vh;
+  #sobre{
+    margin-bottom: 40vh;
   }
   #education p {
     font-size: 0.7rem ;
@@ -458,7 +449,6 @@ h4 {
     padding: 0;
   }
 }
-
 @media (max-width: 576px) {
   #navbarNav {
     position: absolute;
@@ -466,14 +456,12 @@ h4 {
     max-width: 100%;
     top: 10vh;
     right: 5vh;
+    left: 0;
   }
   .navbar-nav {
     min-width: 100%;
     max-width: 100%;
     margin: 0 auto;
-  }
-  #proyectos {
-    grid-template-columns: 1fr;
   }
   .landing-img {
     display: none;
